@@ -31,7 +31,7 @@ const getUsersNames=(users)=>{
 console.log('Average Age:', getUserAverageAge(users));
 console.log('Names:', getUsersNames(users));
 
-/* ------------------------------ TASK 5 -----------------------------------
+/* ------------------------------ TASK 2 -----------------------------------
 Turimas "audi" objektas.
 
 Parašykite funkciją "showObjectKeys", kuri kaip argumentą priims objektą 
@@ -42,5 +42,9 @@ const audi = {
     model: 'A6',
     year: 2005,
     color: 'white',
-  };
+};
   
+const showObjectKeys=(obj)=>{
+    return Object.keys(obj)
+}
+console.log("Automobilio parametrai: " + showObjectKeys(audi));
