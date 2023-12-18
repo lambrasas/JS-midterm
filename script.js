@@ -48,3 +48,34 @@ const showObjectKeys=(obj)=>{
     return Object.keys(obj)
 }
 console.log("Automobilio parametrai: " + showObjectKeys(audi));
+
+/* ------------------------------ TASK 3 --------------------------------------------
+Sukurkite konstruktoriaus funkciją "Calculator" (naudokite ES5), kuri gebės sukurti objektus su 4 metodais:
+sum(a, b) - priima du skaičius ir grąžina jų sumą.
+subtraction(a, b) - priima du skaičius ir grąžina jų skirtumą.
+multiplication(a, b) - priima du skaičius ir grąžina jų daugybos rezultatą;
+division(a, b) - priima du skaičius ir grąžina jų dalybos rezultatą;
+------------------------------------------------------------------------------------ */
+function Calculator(){
+    this.sum=function(a,b){
+        return a + "+" + b + " = " + (a + b);
+    }
+    this.sub=function(a,b){
+        return a + "-" + b + " = " + (a - b);
+    }
+    this.mult=function(a,b){
+        return a + "*" + b + " = " + (a * b);
+    }
+    this.div=function(a,b){
+       if(b===0){
+        throw new Error("Division by zero not allowed")
+
+       }
+       return a + "/" + b + " = " + (a / b);
+    }
+}
+var calc = new Calculator();
+console.log(calc.sum(1, 2));      
+console.log(calc.sub(1, 2));
+console.log(calc.mult(1, 2));
+console.log(calc.div(1, 2));
